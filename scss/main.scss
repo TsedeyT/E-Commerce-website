@@ -1,0 +1,45 @@
+@import 'config';
+@import 'menu';
+@import 'product';
+@import 'footer';
+@import 'shop';
+
+*{
+	box-sizing: border-box;
+}
+
+
+body{
+	background-color: $primary-color;
+	height: 100%;
+	font-family: 'Just Another Hand', cursive;
+	line-height: 1.5;
+	font-size: 1.12rem; 
+	letter-spacing: .3px;
+}
+
+section {
+   padding: 30px 29.5px
+}
+ul {
+    list-style: none;
+	padding-left: 0; 
+}
+a{
+	text-decoration: none;
+	&:active,
+	&:hover{
+		outline: 0;
+	}
+}
+
+
+.home-main__bg{
+	background-image: url('../img/cat-banner-womens-new-in-web.jpeg');
+	height: 496px;
+    width: 100%;
+    @include bg-image;
+	position: relative;
+}
+
+@import 'mobile';

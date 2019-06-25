@@ -1,0 +1,30 @@
+{
+  "name": "ecommerce-website",
+  "version": "1.0.0",
+  "description": "Ecommerce website",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0"
+  },
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TsedeyT"
+  },
+  "keywords": [
+    "Ecommerce",
+    "website",
+    "html5",
+    "CSS3",
+    "SASS",
+    "JavaScript",
+    "jQuery"
+  ],
+  "author": "Tsedey Terefe",
+  "license": "MIT"
+}

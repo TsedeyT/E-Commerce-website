@@ -1,0 +1,124 @@
+.shop_outer{
+	font-family: lato,arial,helvetica,sans-serif;
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+	.shop_left{
+    	width: 48%;
+		@include bg-image;
+		background-image: url('../img/prodcut_one.jpg');
+	}
+	.change-image_red{
+				background-image: url('../img/product_five.jpg');
+		}
+		.change-image_white{
+				background-image: url('../img/product_six.jpg');
+		}
+		.change-image_black{
+				background-image: url('../img/prodcut_one.jpg');
+
+		}
+	.shop_right{
+    	width: 48%;
+    	padding: 20px;
+    	background-color: $very-light-grey;
+    		.product-name {
+			    font-weight: 400;
+			    font-size: 24px;
+			    line-height: 30px;
+			    margin-bottom: 7px;
+			}
+			.shop-content{
+				.product-number {
+    				color: $dark-grey;
+    				font-size: 12px;
+				}
+				.product-price {
+				    font-weight: 700;
+				    font-size: 24px;
+				    margin: 26px 0;
+				}
+				.product-variations{
+					li.attribute {
+					    margin-bottom: 7px;
+					    overflow: hidden;
+					    padding: 0;
+					    position: relative;
+					    .label {
+						    font-size: 12px;
+						    line-height: 16px;
+						    margin-bottom: 11px;
+						    text-transform: uppercase;
+						    .size_guide{
+						   	 margin-left: 30%;	
+							   	 &:hover{
+									color: $secondary-color;
+									}
+							}
+						}
+						.value{
+								li.selectable {
+								    border: 2px solid $white;
+								    float: left;
+								    margin-bottom: 15px;
+								    margin-right: 10px;
+								     width: 30px;
+									height: 30px;
+									display: flex;
+									justify-content: center;
+	    							align-items: center;
+	    							
+	    							&.default_size{
+	    								border-color: $secondary-color;
+
+	    							}
+	    							 	
+									&.dress-red{
+										background-color: $red;
+									}
+									&.dress-white{
+										background-color:$white;
+									}
+								    &.dress-black{
+										background-color: $black;
+								    }
+								   &:hover{
+										border-color: $secondary-color;
+									}
+
+								}
+								
+						}
+					}
+				}
+				.product-quantity{
+					input{
+						width: 35%;
+    					height: 37px;
+					}
+					.product-quantity_box{
+					    display: inline-block;
+					    padding: 4px;
+					    background: $dark-grey;
+					    text-align: center;
+					    color: $white;
+					    width: 35px;
+					    cursor: pointer;
+					    &:hover{
+					    	background:$secondary-color;
+					    }
+					}
+				}
+			}
+	}
+	
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,112 @@
+.section-wrapper{
+   position: relative;
+}
+
+.product-outer{
+    display: flex;
+    width: 100%;
+    text-align: center;	
+}
+.product-box{
+		height: 496px;
+    	width: 93%;
+	max-width: 100%;
+    	position: relative;
+    	
+    	display: flex;
+    	@include bg-image
+    	&.product-box__image1{
+			background-image: url(../img/prodcut_one.jpg);
+			
+		}
+		&.product-box__image2{
+			background-image: url(../img/product_two.jpg);
+			
+		}
+		&.product-box__image3{
+			background-image: url(../img/product_four.jpg);
+			
+		}
+		&:hover,
+  &:focus{
+	  transform: scale(1.2);
+
+}
+} 
+
+.product-inner {
+    width: 100%;
+     height: 100vh;
+    overflow: hidden;
+    @include easeOut;
+		button {
+		    background: none;
+		    border: 0;
+		    box-sizing: border-box;
+		    margin: 1rem;
+		    padding: 1.2rem 1.7rem;
+		    box-shadow: inset 0 0 0 2px $dark-grey;
+		    color: $dark-grey;
+		    font-weight: 700;
+		    position: relative;
+		    vertical-align: middle;
+		    text-align: center;
+    		outline: none;
+    		    min-width: 58%;
+    		        top: 37px;
+			  &:before,
+			  &:after {
+			    box-sizing: inherit;
+			    content: '';
+			    position: absolute;
+			    width: 100%;
+			    height: 100%;
+			  }
+		}
+
+	.draw {
+    	transition: color 0.2s;
+
+		  &:before,
+		  &:after {
+		    border: 2px solid transparent;
+		    width: 0;
+		    height: 0;
+		  }
+		  &:before {
+		    top: 0;
+		    left: 0;
+		  }
+
+		  &::after {
+		    bottom: 0;
+		    right: 0;
+		  }
+		  &:hover {
+		    color: $secondary-color;
+		    cursor: pointer;
+		}
+		&:hover::before,
+		&:hover::after {
+		    width: 100%;
+		    height: 100%;
+		}
+
+	  	&:hover::before {
+	    	border-top-color: $secondary-color; 
+	    	border-right-color: $secondary-color;
+	    	transition:
+	      		width 0.25s ease-out, // Width expands first
+	      		height 0.25s ease-out 0.25s; // And then height
+	  	}
+
+		&:hover::after {
+		    border-bottom-color: $secondary-color; // Make borders visible
+		    border-left-color: $secondary-color;
+		    transition:
+	      border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+	      width 0.25s ease-out 0.5s, // And then exanding width
+	      height 0.25s ease-out 0.75s; // And finally height
+  		}
+	}
+}

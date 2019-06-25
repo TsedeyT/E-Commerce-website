@@ -1,0 +1,80 @@
+$primary-color: #fff;
+$secondary-color: #eece1a;
+$show-home-image: true;
+
+$red: #f45e61;
+$dark-grey: #4f5b66;
+$light-grey : #f4f4f4;
+$black: #000;
+$white: #fff;
+$light-dark: #2b303b;
+$very-light-grey: #e8e4e4;
+$opacity : 0.1;
+
+
+
+@mixin easeOut{
+	transition: all .3s ease-in-out;
+}
+
+@mixin bg-image{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+@mixin boxShadow{
+	box-shadow: 0 3px 16px rgba($dark-grey, $opacity);
+}
+
+
+@mixin button-icon{
+	border-top-right-radius: 0.3125rem;
+    border-bottom-right-radius: 0.3125rem;
+    border: none;
+    height: 50px;
+    color: $dark-grey;
+	opacity: 0;
+	font-size: 1rem; 
+	@include easeOut;
+		&:hover{
+ 			background: $light-dark;
+		}
+}
+
+@mixin form-hover{
+	
+	&:hover button.icon,
+	&:active button.icon,
+	&:focus button.icon{
+		outline: none;
+		opacity: 1;
+		margin-left: -50px;
+	}
+}
+
+
+
+@function set-text-color($color){
+	@if(lightness($color)>40){
+		@return $black; // Lighter backgorund, return dark color
+	} @else	{
+		@return $white; // Darker background, return light color
+	}
+}
+
+@mixin mediaXl{
+	@media screen and (max-width: 992px){
+		@content;
+	}
+}
+@mixin mediaMd{
+	@media screen and (max-width: 768px){
+		@content;
+	}
+}
+@mixin mediaXS{
+	@media screen and (max-width: 560px){
+		@content;
+	}
+}
