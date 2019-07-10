@@ -38,11 +38,16 @@
 		}
 
 	} 
-		.menu {
-			.menu-nav {
-				width: 100%;
-			}
+	.menu {
+		.menu-nav {
+			width: 100%;
 		}
+	}
+	.footer_content_list{
+		display: none;
+	}&.show_list {
+    	display: block;
+	}
 }
 
  
@@ -145,11 +150,27 @@
 
 	.product-outer{
 		flex-direction: column;
+		.product-inner {
+			margin-bottom: 51px;
+			button{
+				min-width: 35%;
+			}
+			figure {
+		    	margin: 0 auto;
+		    	width: 100%;
+		    	img{
+		    		width: auto;
+    				height: 100%;
+		    	}
+			}
+		}
 	}
 	.product-box {
 		width: 100%;
 	}
 
+
+	  
 	.footer_outer {
     	flex-direction: column;
     	.footer_content_social{

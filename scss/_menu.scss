@@ -32,22 +32,24 @@
 		}
 }
 header{
- 	position: relative;
+ 
     z-index: 8;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include easeOut;
     background-color: transparent;
-   
-	    .header__container {
-	    	padding: 1rem 5rem;
+    .header__container {
+	    	padding: 1rem 5rem 0rem;
 	    	background-color: $primary-color;
-			@include easeOut;
 		}
 }
 .fixed{
-	@include boxShadow;
+	
     position: fixed;
     width: 100%;
-    @include easeOut;
+    
 }
 .less-margin{
 	@include easeOut;
@@ -59,15 +61,16 @@ header{
 .menu{
 	.logo {
     	width: 92px;
+    	@include easeOut;
 	}
 	.menu-nav {
 	    display: flex;
 	    justify-content: space-between;
 	    width: 90%;
-	    margin: 1.25rem auto 0.625rem;
+	    margin: 1.25rem auto 0rem;
 	    padding-left: 0;
 		list-style: none;
-		@include easeOut;
+		
 	  		.nav-item{
 				position: relative;
 				width: 100%;
@@ -113,6 +116,9 @@ header{
 	    	display: flex;
 	    	li{
 	    		margin-left: 0.625rem;
+	    		a{
+	    			color: $black;
+	    		}
 	    	}
 	    }
 

@@ -17,6 +17,13 @@ body{
 	font-size: 1.12rem; 
 	letter-spacing: .3px;
 }
+body.scrolled{
+	.menu .logo {
+    	width: 62px;
+    	@include easeOut;
+	}
+}
+
 
 section {
    padding: 30px 29.5px
@@ -33,7 +40,9 @@ a{
 	}
 }
 
-
+main{
+	padding-top: 175px;
+}
 .home-main__bg{
 	background-image: url('../img/cat-banner-womens-new-in-web.jpeg');
 	height: 496px;

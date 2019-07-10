@@ -6,6 +6,7 @@ var classes = 'change-image_red change-image_white change-image_black';
 
 
 $(document).ready(function(){
+
 	$('.menu-btn').click(function(){
 		$('.menu-btn').toggleClass('close');
 		$('.menu-nav').toggleClass('show');
@@ -105,23 +106,41 @@ $('.nav-item').click(function(){
 
 
 $(window).scroll(function(){
-    var scrollPos = $(window).scrollTop();
-    if(scrollPos>50){
-			$('.header__container').addClass('fixed');
+ if ($(this).scrollTop() > 0) {
+
 			$('.menu-branding').addClass('logo--smaller');
 			$('header').addClass('fixed');
 			$('.menu-nav').addClass('less-margin');
-
+			
+			$('body').addClass('scrolled');
 
 		}else{
 			$('.header__container').removeClass('fixed');
 			$('.menu-branding').addClass('logo--smaller');
 			$('header').removeClass('fixed');
 			$('.menu-nav').removeClass('less-margin');
-		}
 
+			$('body').removeClass('scrolled');
+		}
+		
 });
+$(window).scroll();
  
+
+ 	var $navbar =$('header');
+
+ 	 $('a[href^="#"]').on('click',function(e){
+ 		 e.preventDefault();
+			var currentScroll = $(window).scrollTop();
+			console.log(currentScroll);
+			var scrollTop =
+				$($(this).attr('href')).position().top;
+        		$navbar.outerHeight();
+        		console.log($navbar.outerHeight());
+		    var ratio = Math.abs(currentScroll - scrollTop);
+		    $('html, body').animate({ scrollTop: scrollTop }, ratio/10);
+		 	});
+
 });
 
 
