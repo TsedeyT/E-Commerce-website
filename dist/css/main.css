@@ -294,7 +294,7 @@ span.total_item {
     .product-inner figure img {
       transform: scale(1);
       transition: all .3s ease-in-out;
-      height: auto;
+      height: 100%;
       max-width: 100%; }
 
 .footer-bg {
@@ -535,7 +535,10 @@ main {
   .footer_content_list {
     display: none; }
   .show_list {
-    display: block; } }
+    display: block; }
+  .product-outer .product-inner figure img {
+    width: auto;
+    height: auto; } }
 
 @media screen and (max-width: 768px) {
   header .header__container {

@@ -48,6 +48,17 @@
 	}&.show_list {
     	display: block;
 	}
+
+	.product-outer{
+		.product-inner {
+			figure{
+		    	img{
+		    		width: auto;
+    				height: auto;
+		    	}
+			}
+		}
+	}
 }
 
  
