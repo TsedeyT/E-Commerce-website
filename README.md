@@ -4,7 +4,7 @@
 
    -with notification when an item is added to cart
    -calculates total price in the cart
-   -shows differnt colors of one item
+   -shows different colors of one item
  
  
  * Working in progess
